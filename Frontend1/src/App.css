@@ -1,0 +1,255 @@
+/* 📦 Layout & Spacing */
+.add_button {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+/* 📌 Header Row */
+.tr_color {
+  color: #ffffff;
+  background-color: #c62828;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 1.05rem;
+}
+
+/* 🧊 Table Cell Padding */
+.tr_color th,
+.table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* 🔎 Hover Highlight */
+.table-hover tbody tr:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* 📋 Table Bordering */
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  width: 100%;
+}
+
+/* ✅ Button Styling */
+.btn {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  will-change: transform;
+  background-color: #0d6efd;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  background-color: #0b5ed7;
+  color: #fff;
+}
+
+.btn:focus {
+  outline: 2px solid #0dcaf0;
+  outline-offset: 2px;
+}
+
+/* 🎯 Alerts */
+.alert-info {
+  border-left: 5px solid #0dcaf0;
+  background-color: #e9f8fc;
+  color: #055160;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.alert-success {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  border-left: 5px solid #198754;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #842029;
+  border-left: 5px solid #dc3545;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+/* 🌿 Form Labels */
+.form-label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+/* ✏️ Inputs & Textareas */
+.form-control {
+  font-size: 1rem;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.25);
+}
+
+/* 📎 Submit Button */
+button[type="submit"] {
+  background-color: #198754;
+  border: none;
+  color: white;
+  font-weight: 500;
+  padding: 10px 18px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #157347;
+}
+
+/* 🧩 Table Responsiveness */
+.table-wrapper {
+  overflow-x: auto;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+/* 🌈 Responsive Table Text & Buttons */
+@media (max-width: 768px) {
+  .table th,
+  .table td {
+    font-size: 0.9rem;
+    padding: 10px 8px;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+}
+
+/* 🧠 Tooltip Styling */
+[title] {
+  cursor: help;
+}
+
+/* 🧊 Modal */
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-content {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  z-index: 1100;
+}
+
+/* 📚 Sidebar */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  background-color: #343a40;
+  color: white;
+  padding-top: 2rem;
+  transition: transform 0.3s ease;
+  z-index: 999;
+}
+
+.sidebar a {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background-color: #495057;
+  border-left: 4px solid #0d6efd;
+}
+
+/* 📄 Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 1rem 0;
+}
+
+.page-link {
+  background-color: #f8f9fa;
+  color: #0d6efd;
+  padding: 8px 14px;
+  border-radius: 4px;
+  border: 1px solid #dee2e6;
+  transition: background-color 0.2s;
+  text-decoration: none;
+}
+
+.page-link:hover {
+  background-color: #e2e6ea;
+}
+
+.page-link.active {
+  background-color: #0d6efd;
+  color: white;
+}
+
+
+/* ===== Print Styles ===== */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .print-section,
+  .print-section * {
+    visibility: visible;
+  }
+
+  .print-section {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    padding: 2rem;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}
